@@ -29,7 +29,8 @@ class _DiseaseClassificationState extends State<DiseaseClassification> {
     Tflite.close();
     String? res;
     res = await Tflite.loadModel(
-        model: 'assets/model.tflite', labels: 'assets/labels.txt');
+        model: 'assets/tflite_model_another.tflite',
+        labels: 'assets/labels.txt');
     print(res);
   }
 

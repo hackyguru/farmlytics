@@ -126,7 +126,7 @@ class _TimeLinePageState extends State<TimeLinePage> {
         selectedDate = picked;
 
         currentDay = daysBetween(selectedDate, DateTime.now());
-        print('@@@@@@@@@@@@@@@@@selected@@@@@@@@@@@@@@@@@@');
+
         currentIndex = currentStep(data.crop_data, currentDay);
       });
     }
@@ -135,9 +135,8 @@ class _TimeLinePageState extends State<TimeLinePage> {
 
 int currentStep(List crop_data, int currentDay) {
   for (var i = 0; i < crop_data.length; i++) {
-    print('${crop_data[i]['from']}');
     if (crop_data[i]['from'] <= currentDay &&
-        currentDay <= crop_data[i]['to']) {
+        currentDay <= crop_data[i]['end']) {
       return i;
     }
   }

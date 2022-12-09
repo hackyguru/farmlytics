@@ -72,7 +72,6 @@ class _MainPageState extends State<MainPage> {
         ],
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Text('Agri-Aide', style: kHeaderStyle),
       ),
       body: pages[current_index],
     );
